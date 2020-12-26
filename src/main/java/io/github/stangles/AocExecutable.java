@@ -26,9 +26,15 @@ public abstract class AocExecutable<T>
   }
 
   void printSolutions(Collection<T> input) {
+    long start = System.currentTimeMillis();
     System.out.println("part 1: " + part1(input));
+    System.err.printf("Completed part 1 in %d ms%n", System.currentTimeMillis() - start);
+
+    start = System.currentTimeMillis();
     System.out.println("part 2: " + part2(input));
+    System.err.printf("Completed part 2 in %d ms%n", System.currentTimeMillis() - start);
   }
+
 
   abstract String part1(Collection<T> input);
   abstract String part2(Collection<T> input);
